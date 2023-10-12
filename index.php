@@ -54,7 +54,11 @@ if (isset($_POST['submitBtn'])) {
         <h2>Employee Login</h2>
         <input type="text" name="email" id="email" placeholder="email" required>
         <input type="password" name="password" id="password" placeholder="password" required>
-        <input name="submitBtn" type="submit" value="login">
+        <div class="down">
+            <span><a href="managerLogin.php">manager?</a></span>
+            <div class="space"></div>
+            <input name="submitBtn" type="submit" value="login">
+        </div>
     </form>
 </body>
 </html>

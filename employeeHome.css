@@ -4,44 +4,187 @@
     list-style: none;
     text-decoration: none;
 }
-.company-name{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 4rem;
-    background-color: beige;
+body{
+    /* position: relative; */
 }
-.company-name h2{
-    color: brown;
-}
-.main-body{
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100%;
-    background-color: gray;
-}
-.nav-bar{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    padding-top: 3rem;
-    background-color: red;
-    background-color: rgb(18, 55, 110);
-}
-.nav-bar ul{
-
-}
-.nav-bar ul li{
-    margin: .5rem;
-}
-.nav-bar ul li a{
-    color: brown;
+.nav-bar {
+    width: 50%;
+    float: right;
+    position: relative;
+    background: #3e5c50;
+    text-align: center;
+    color: white;
+    font-weight: bold;
     text-transform: uppercase;
 }
-.main-content{
-    flex: 5;
-    border-top-left-radius: 1rem;
+.nav-bar:before,
+.nav-bar:after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 100%;
+    border-bottom: 30px solid #3e5c50;
+    border-left: 30px solid transparent;
+    /* border-right: 15px solid transparent; */
+}
+.nav-bar:after {
+    bottom: 100%;
+    /* bottom: auto; */
+    top: 0;
+    /* top: 100%; */
+    border-bottom: none;
+    /* border-top: 15px solid blue; */
+}
+.bar{
+    position: absolute;
+    right: 0;
+    margin-top: -1.5rem;
+    padding-right: 1rem;
+}
+.bar, form button, .arrow i{
+    cursor: pointer;
+}
+.bar i{
+    color: #fff;
+}
+.product{
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    /* background-color: red; */
+}
+.product form{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.product form input{
+    padding: .5rem;
+}
+.product form #product{
+    width: 15rem;
+}
+.product form #qty{
+    width: 4rem;
+}
+.item, .quantity, .price, .total-price{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+.product form button{
+    width: 7rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    background-color: silver;
+}
+.table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+.table table{
+    width: 80%;
+    margin-right: 10%;
+    border-collapse: collapse;
+    border: 1px solid silver;
+}
+.table table tr{
+    height: 2rem;
+    width: 100%;
+    border: 1px solid silver;
+}
+.table table th, td{
+    border: 1px solid silver;
+}
+.table table tbody tr:nth-child(even){
+    background-color: #ccc;
+
+}
+thead{
+    color: #fff;
+    background-color: #3e5c50;
+}
+.table table #sn{
+    max-width: 1rem;
+}
+.menu{
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+    height: 90vh;
+    width: 12rem;
+    background-color: #fff;
+    box-shadow: 4px 8px 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+}
+.menu .arrow{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2rem;
+    background-color: #3e5c50;
+}
+.menu .arrow i{
+    margin-right: 1rem;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    margin-top: 1rem;
+    margin-left: 2rem;
+}
+.menu ul li{
+    margin: .5rem;
+}
+.menu ul li a{
+text-transform: capitalize;
+color: #2b2b2b;
+}
+.bottomContainer{
+    display: flex;
+    width: 80%;
+    margin-top: 3rem;
+    margin-left: 5%;
+}
+.paymentLabel{
+    position: absolute;
+    margin-top: -3.5rem;
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: #fff;
+}
+.paymentType{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border: 1px solid silver;
+    height: 2rem;
+    padding: .5rem .5rem .5rem 1rem;
+    
+}
+.paymentType label{
+    margin-right: 3rem;
+}    
+
+.invoiceContainer{
+    flex: 1;
+   
+}
+.invoiceContainer button{
+    float: right;
+    border: none;
+    outline: none;
+    padding: .7rem;
+    color: #fff;
+    background-color: #3e5c50;
 }
